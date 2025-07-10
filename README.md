@@ -19,6 +19,7 @@ Desenvolvi esse site com conhecimento que obtive em meus primeiros cursos realiz
 ## 🔗 Acesso
 
 Caso queira visualizar o projeto, acesse:
+https://ngzcamp-luizhrjunqueiras-projects.vercel.app/
 
 
 ## 📷 Prévia (opcional)
