@@ -22,11 +22,3 @@ Caso queira visualizar o projeto, acesse:
 https://ngzcamp-luizhrjunqueiras-projects.vercel.app/
 
 Caso inspecione a página para visualizar o layout mobile, peço que aperte F5 para recarregar a página.
-
-
-## 📷 Prévia (opcional)
-
-Você pode adicionar aqui um screenshot do site:
-```md
-
-
