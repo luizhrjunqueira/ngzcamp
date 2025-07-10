@@ -1,4 +1,3 @@
-# ngzcamp
 # Ngz Camp - Página Inicial do Campeonato
 
 Esse projeto foi criado com o objetivo de divulgar um campeonato de **Counter-Strike** que eu estava organizando.
