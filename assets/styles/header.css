@@ -1,0 +1,297 @@
+/* ANIMAÇÃO - UNIVERSO */
+#stars {
+  position: fixed;
+  z-index: 0;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* CABEÇALHO */
+header {
+  min-height: 100vh;
+}
+.header {
+  backdrop-filter: blur(1px);
+  position: relative;
+  z-index: 10;
+  width: auto;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--withe-color);
+}
+
+/* NAVEGAÇÃO */
+
+/* NAV - LOGO */
+.header-logo a {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 10px;
+}
+
+/* NAV - LINKS */
+.header-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-links li{
+  margin-right: 40px;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.header-links li:last-child {
+  margin-right: 0;
+}
+
+.header-links li a {
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.header-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient( to right, #00C6F7, #0A1f44);
+  border-radius: 60px;
+  bottom: -1px;
+  left: 0;
+  transition: width .5s;
+}
+
+.header-links li a:hover::after {
+  width: 100%;
+}
+
+/* NAV - BUTTON */
+.header-button a{
+  position: relative;
+  background: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: 0.5s;
+}
+
+.header-button a:hover {
+  background: var(--blue-color);
+  color: var(--blue-color);
+  box-shadow: 0 0 25px var(--blue-color);
+}
+
+.header-button a::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #010d1f;
+}
+
+.header-button span {
+  position: relative;
+  z-index: 9999;
+}
+
+.header-button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.header-button i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #010d1f;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+.header-button a:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.header-button i::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #010d1f;
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+
+.header-button a:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+.mobile-menu-icon {
+  padding: 10px;
+  display: none;
+}
+
+/* NAV - LINKS */
+.menu-links {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(1, 13, 31, 0.966);
+  box-shadow: -10px 0 10px #00091ab7;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-links li {
+  text-align: left;
+  list-style: none;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menu-links.show-links li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-links li:last-child {
+  margin-bottom: 0;
+}
+
+.menu-links li a {
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.menu-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient( to right, #00C6F7, #0A1f44);
+  border-radius: 60px;
+  bottom: -1px;
+  left: 0;
+  transition: width .5s;
+}
+
+.menu-links li a:hover::after {
+  width: 100%;
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 1100px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .icon {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+
+  nav .header-links,
+  nav .header-button {
+    display: none;
+  }
+
+  .menu-links .header-logo {
+    display: none;
+  }
+
+  .menu-links li a {
+    position: relative;
+  }
+
+  .mobile-menu-icon {
+    position: relative;
+    z-index: 999;
+    display: block;
+  }
+
+  .mobile-menu-icon img {
+    margin-top: 5px;
+    width: 35px;
+    height: auto;
+  }
+
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-links.open {
+    display: flex; 
+  }
+}
+
+@media(max-width: 765px) {
+  .header {
+    padding: 30px 30px;
+  }
+}
+
+@media(max-width: 430px) {
+  .menu-links {
+    width: 100%;
+  }
+
+  .menu-links li {
+    text-align: center;
+  }
+}
+
+@media(max-width: 430px) {
+  .header {
+    padding: 10px 10px;
+  }
+}
