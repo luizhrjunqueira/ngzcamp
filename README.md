@@ -20,6 +20,7 @@ Desenvolvi esse site com conhecimento que obtive em meus primeiros cursos realiz
 
 Caso queira visualizar o projeto, acesse:
 https://ngzcamp-luizhrjunqueiras-projects.vercel.app/
+
 Caso inspecione a página para visualizar o layout mobile, peço que aperte F5 para recarregar a página.
 
 
